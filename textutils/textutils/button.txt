@@ -1,0 +1,6 @@
+<button type="button"><a href="http://127.0.0.1:8000/">Home</a></button>
+<button type="button"><a href="http://127.0.0.1:8000/admin">Admin</a></button>
+<button type="button"><a href="http://127.0.0.1:8000/about">about</a></button>
+<button type="button"><a href="http://127.0.0.1:8000/homepage">homepage</a></button>
+<button type="button"><a href="http://127.0.0.1:8000/link">link</a></button>
+<button type="button"><a href="http://127.0.0.1:8000/html">HTML</a></button>
