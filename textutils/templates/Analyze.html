@@ -1,18 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analyzing Text</title>
+    <style>
+        .navbar {
+            display: grid;
+            background-color: rgb(147, 237, 147);
+            align-items: center;
+        }
+
+        #pic {
+            border-radius: 3em;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            margin: auto;
+            width: 102px;
+        }
+
+        #pic #logo:hover {
+            border: 2px solid black;
+        }
+
+        #logo {
+            height: 100px;
+            width: 100px;
+            border-radius: 6em;
+        }
+
+        #heading {
+            display: grid;
+            justify-content: center;
+        }
+
+        #heading:hover {
+            background-color: rgb(28, 178, 28);
+        }
+
+        #nav {
+            background-color: darkgray;
+            margin: auto;
+            width: 550px;
+        }
+
+        #nav li {
+            display: inline;
+            border-radius: 0.7em;
+            background-color: rgb(39, 211, 211);
+            padding: 5px;
+            font-size: 20px;
+            margin: 4px;
+            text-align: center;
+            width: 100px;
+        }
+
+        #nav li:hover {
+            background-color: rgb(65, 255, 255);
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width: 1112px) {
+            #nav {
+                display: grid;
+                grid-gap: 10px;
+                grid-auto-flow: column;
+                width: 450px;
+            }
+
+            #main {
+                display: grid;
+                justify-content: center;
+                background-color: aqua;
+                text-align: center;
+            }
+
+            #main h1 {
+                background-color: antiquewhite;
+                font-size: 50px;
+            }
+
+            #main form {
+                justify-content: center;
+            }
+
+            #main form textarea {
+                width: 1090px;
+                height: 261px;
+            }
+
+            #main form div {
+                margin: auto;
+                width: fit-content;
+                padding: 20px 100px 20px 100px;
+                background-color: aliceblue;
+                text-align: left;
+            }
+
+            #main form button {
+                color: rgb(20, 20, 19);
+                background-color: rgb(228, 212, 212);
+                border-radius: 2em;
+                padding: 4px;
+                width: 200px;
+            }
+        }
+
+
+        @media only screen and (max-width: 1112px) and (min-width: 500px) {
+            #nav {
+                background-color: red;
+                display: grid;
+                grid-gap: 10px;
+                grid-auto-flow: column;
+                width: 440px;
+            }
+
+            #main {
+                display: grid;
+                justify-content: center;
+                background-color: aqua;
+                text-align: center;
+            }
+
+            #nav li:hover {
+                background-color: rgb(65, 255, 255);
+                cursor: pointer;
+            }
+
+            #main h1 {
+                background-color: antiquewhite;
+                font-size: 50px;
+            }
+
+            #main form {
+                justify-content: center;
+            }
+
+            #main form textarea {
+                height: 261px;
+            }
+
+            #main form div {
+                margin: auto;
+                width: fit-content;
+                padding: 20px 100px 20px 100px;
+                background-color: aliceblue;
+                text-align: left;
+            }
+
+            #main form button {
+                color: rgb(20, 20, 19);
+                background-color: rgb(228, 212, 212);
+                border-radius: 2em;
+                padding: 4px;
+                width: 200px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .navbar {
+                display: grid;
+                justify-content: center;
+            }
+
+            #nav {
+                display: grid;
+                background-color: blue;
+                margin: 0px;
+                width: 159px;
+            }
+
+            #nav li {
+                margin-top: 5px;
+                border-radius: 0.7em;
+                background-color: rgb(39, 211, 211);
+                padding: 5px;
+                font-size: 20px;
+                text-align: center;
+                /* width: 100px; */
+            }
+
+
+            /* .navbar #nav li {
+            display: inline-block;
+            border-radius: 0.7em;
+            background-color: rgb(39, 211, 211);
+            padding: 5px;
+        } */
+
+            #main {
+                display: grid;
+                /* align-items: center; */
+                justify-content: center;
+                align-items: center;
+                background-color: aqua;
+                text-align: center;
+            }
+
+            #nav li:hover {
+                background-color: rgb(65, 255, 255);
+                /* color: pink; */
+                cursor: pointer;
+            }
+
+            #main h1 {
+                text-align: center;
+                background-color: antiquewhite;
+                font-size: 20px;
+                /* width: 150px; */
+            }
+
+            #main form {
+                justify-content: center;
+            }
+
+            #main form textarea {
+                height: 240px;
+            }
+
+            #main form div {
+                margin: auto;
+                /* width: fit; */
+                /* padding: 20px 100px 20px 100px; */
+                background-color: aliceblue;
+                /* text-align: center; */
+                /* display: grid; */
+                /* justify-content: center */
+                text-align: left;
+            }
+
+            #main form button {
+                color: rgb(20, 20, 19);
+                background-color: rgb(228, 212, 212);
+                border-radius: 2em;
+                /* text-align: center; */
+                padding: 4px;
+                width: 200px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<h1>Analyzing Text -- {{purpose}}</h1>
-<p>
-    <!-- {{text}} -->
-    <pre>{{analyzed_text}}</pre>
-    <!-- {{analyzed_text}} -->
-    {{counter}}
-</p>
+
+    <div class="navbar">
+        <div id="pic">
+            <img id="logo" src="Charmender.png" alt="some issue">
+        </div>
+        <div id="heading">
+            <h1>Analyzing Text -- {{purpose}}</h1>
+            <!-- <h1>Textutils.com</h1> -->
+        </div>
+        <!-- <h4>Textutils.com</h4> -->
+        <ul id="nav">
+            <li>Home</li>
+            <li>Contact us</li>
+            <li>About us</li>
+        </ul>
+    </div>
+    <p>
+        <!-- {{text}} -->
+    <div id="main">
+        <div>
+            <pre>{{analyzed_text}}</pre>
+            <!-- {{analyzed_text}} -->
+            {{counter}}
+        </div>
+    </div>
+    </p>
 </body>
+
 </html>
