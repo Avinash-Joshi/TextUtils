@@ -67,7 +67,7 @@ def analyze(request):
     param={'purpose':Purpose,'analyzed_text':analyze}
     return render(request,'Analyze.html',param)
 
-    return HttpResponse('Hello')
+    # return HttpResponse('Hello')
 
 # def analyze(request):
 #     djtext=request.GET.get('text','default')
