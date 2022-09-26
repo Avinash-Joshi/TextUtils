@@ -11,7 +11,6 @@
             display: grid;
             background-color: rgb(147, 237, 147);
             align-items: center;
-            justify-content: center;
         }
 
         #pic {
@@ -21,31 +20,21 @@
             align-items: center;
             background-color: blue;
             margin: auto;
-            /* height: ; */
             width: 102px;
         }
 
         #pic #logo:hover {
             border: 2px solid black;
-            /* box-shadow:aqua; */
-            /* background-color: red; */
         }
 
         #logo {
-            /* size: 40px;    */
-            /* justify-content: center;
-            align-items: center; */
             height: 100px;
             width: 100px;
             border-radius: 6em;
-            /* margin-top: 4px;
-            margin-left: 40px; */
-            /* display: inline; */
         }
 
         #heading {
             display: grid;
-            /* align-items: center; */
             justify-content: center;
         }
 
@@ -53,61 +42,207 @@
             background-color: rgb(28, 178, 28);
         }
 
+        #nav {
+            background-color: darkgray;
+            margin: auto;
+            width: 550px;
+        }
+
         #nav li {
             display: inline;
-            border-radius: 2em;
+            border-radius: 0.7em;
             background-color: rgb(39, 211, 211);
             padding: 5px;
-            margin-left: 15px;
-            font-size: 32px;
-            justify-content: center;
+            font-size: 20px;
+            margin: 4px;
+            text-align: center;
+            width: 100px;
         }
 
         #nav li:hover {
             background-color: rgb(65, 255, 255);
-            /* color: pink; */
             cursor: pointer;
         }
 
-        #main {
-            display: grid;
-            /* align-items: center; */
-            justify-content: center;
-            background-color: aqua;
-            text-align: center;
+        @media only screen and (min-width: 1112px) {
+            #nav {
+                display: grid;
+                grid-gap: 10px;
+                grid-auto-flow: column;
+                width: 450px;
+            }
+
+            #main {
+                display: grid;
+                justify-content: center;
+                background-color: aqua;
+                text-align: center;
+            }
+
+            #main h1 {
+                background-color: antiquewhite;
+                font-size: 50px;
+            }
+
+            #main form {
+                justify-content: center;
+            }
+
+            #main form textarea {
+                width: 1090px;
+                height: 261px;
+            }
+
+            #main form div {
+                margin: auto;
+                width: fit-content;
+                padding: 20px 100px 20px 100px;
+                background-color: aliceblue;
+                text-align: left;
+            }
+
+            #main form button {
+                color: rgb(20, 20, 19);
+                background-color: rgb(228, 212, 212);
+                border-radius: 2em;
+                padding: 4px;
+                width: 200px;
+            }
         }
 
-        #main h1 {
-            /* text-align: center; */
-            background-color: antiquewhite;
-            font-size: 50px;
+
+        @media only screen and (max-width: 1112px) and (min-width: 500px) {
+            #nav {
+                background-color: red;
+                display: grid;
+                grid-gap: 10px;
+                grid-auto-flow: column;
+                width: 440px;
+            }
+
+            #main {
+                display: grid;
+                justify-content: center;
+                background-color: aqua;
+                text-align: center;
+            }
+
+            #nav li:hover {
+                background-color: rgb(65, 255, 255);
+                cursor: pointer;
+            }
+
+            #main h1 {
+                background-color: antiquewhite;
+                font-size: 50px;
+            }
+
+            #main form {
+                justify-content: center;
+            }
+
+            #main form textarea {
+                height: 261px;
+            }
+
+            #main form div {
+                margin: auto;
+                width: fit-content;
+                padding: 20px 100px 20px 100px;
+                background-color: aliceblue;
+                text-align: left;
+            }
+
+            #main form button {
+                color: rgb(20, 20, 19);
+                background-color: rgb(228, 212, 212);
+                border-radius: 2em;
+                padding: 4px;
+                width: 200px;
+            }
         }
 
-        #main form textarea {
-            width: 1090px;
-            height: 261px;
-        }
-         
-        #main form input{
-            background-color: yellow;
-            color: bisque;
-            border-radius: 2em;
-        }
+        @media only screen and (max-width: 500px) {
+            .navbar {
+                display: grid;
+                justify-content: center;
+            }
 
-        #main form button{
-            color: rgb(20, 20, 19);
-            background-color: rgb(228, 212, 212);
-            border-radius: 2em;
-            /* text-align: center; */
-            padding: 4px;
-            width: 200px;
-        }
+            #nav {
+                display: grid;
+                background-color: blue;
+                margin: 0px;
+                width: 159px;
+            }
 
-        #main form button:hover{
-            background-color: rgb(204, 200, 200);
-            color: rgb(0, 0, 0);
-        }
+            #nav li {
+                margin-top: 5px;
+                border-radius: 0.7em;
+                background-color: rgb(39, 211, 211);
+                padding: 5px;
+                font-size: 20px;
+                text-align: center;
+                /* width: 100px; */
+            }
 
+
+            /* .navbar #nav li {
+                display: inline-block;
+                border-radius: 0.7em;
+                background-color: rgb(39, 211, 211);
+                padding: 5px;
+            } */
+
+            #main {
+                display: grid;
+                /* align-items: center; */
+                justify-content: center;
+                align-items: center;
+                background-color: aqua;
+                text-align: center;
+            }
+
+            #nav li:hover {
+                background-color: rgb(65, 255, 255);
+                /* color: pink; */
+                cursor: pointer;
+            }
+
+            #main h1 {
+                text-align: center;
+                background-color: antiquewhite;
+                font-size: 20px;
+                /* width: 150px; */
+            }
+
+            #main form {
+                justify-content: center;
+            }
+
+            #main form textarea {
+                height: 240px;
+            }
+
+            #main form div {
+                margin: auto;
+                /* width: fit; */
+                /* padding: 20px 100px 20px 100px; */
+                background-color: aliceblue;
+                /* text-align: center; */
+                /* display: grid; */
+                /* justify-content: center */
+                text-align: left;
+            }
+
+            #main form button {
+                color: rgb(20, 20, 19);
+                background-color: rgb(228, 212, 212);
+                border-radius: 2em;
+                /* text-align: center; */
+                padding: 4px;
+                width: 200px;
+            }
+        }
     </style>
 
 </head>
@@ -133,8 +268,14 @@
             <h1>Enter the text</h1>
             <textarea name="text" cols="30" rows="10"></textarea>
             <br>
-            <input type="checkbox">Remove Panctuations <br>
-            <button type="submit">Analyze text</button>
+            <div>
+                <input type="checkbox" name="Removepunc">Remove Panctuations <br>
+                <input type="checkbox" name="uppercase">Uppercase <br>
+                <input type="checkbox" name="spaceremover"> Remove Extra Space <br>
+                <input type="checkbox" name="removenewline"> Remove New Line <br>
+                <input type="checkbox" name="countword">Count the words <br>
+                <button type="submit">Analyze text</button>
+            </div>
         </form>
     </div>
 </body>
