@@ -9,7 +9,7 @@ from django.shortcuts import render
 
 def index (request):
     # return HttpResponse('Hello')
-    return render(request,'index.html')
+    return render(request,'Desgining.html')
 
 def analyze(request):
     djtext=request.GET.get('text','default')
