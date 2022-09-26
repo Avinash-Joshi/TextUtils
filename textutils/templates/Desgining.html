@@ -66,6 +66,7 @@
         #nav li:hover {
             background-color: rgb(65, 255, 255);
             /* color: pink; */
+            cursor: pointer;
         }
 
         #main {
@@ -73,18 +74,40 @@
             /* align-items: center; */
             justify-content: center;
             background-color: aqua;
+            text-align: center;
         }
 
         #main h1 {
-            text-align: center;
+            /* text-align: center; */
             background-color: antiquewhite;
             font-size: 50px;
         }
 
-        #main textarea {
+        #main form textarea {
             width: 1090px;
             height: 261px;
         }
+         
+        #main form input{
+            background-color: yellow;
+            color: bisque;
+            border-radius: 2em;
+        }
+
+        #main form button{
+            color: rgb(20, 20, 19);
+            background-color: rgb(228, 212, 212);
+            border-radius: 2em;
+            /* text-align: center; */
+            padding: 4px;
+            width: 200px;
+        }
+
+        #main form button:hover{
+            background-color: rgb(204, 200, 200);
+            color: rgb(0, 0, 0);
+        }
+
     </style>
 
 </head>
@@ -109,7 +132,9 @@
         <form action="/analyze" method="get">
             <h1>Enter the text</h1>
             <textarea name="text" cols="30" rows="10"></textarea>
-
+            <br>
+            <input type="checkbox">Remove Panctuations <br>
+            <button type="submit">Analyze text</button>
         </form>
     </div>
 </body>
