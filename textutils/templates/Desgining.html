@@ -9,36 +9,81 @@
     <style>
         .navbar {
             display: grid;
-            background-color: aliceblue;
+            background-color: rgb(147, 237, 147);
+            align-items: center;
+            justify-content: center;
+        }
+
+        #pic {
+            border-radius: 3em;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            margin: auto;
+            /* height: ; */
+            width: 102px;
+        }
+
+        #pic #logo:hover {
+            border: 2px solid black;
+            /* box-shadow:aqua; */
+            /* background-color: red; */
         }
 
         #logo {
             /* size: 40px;    */
-            height: 50px;
+            /* justify-content: center;
+            align-items: center; */
+            height: 100px;
             width: 100px;
             border-radius: 6em;
-            border-end-end-radius: 2em;
-            margin: 4px;
+            /* margin-top: 4px;
+            margin-left: 40px; */
+            /* display: inline; */
         }
 
-        #pic {
-            display: inline;
+        #heading {
+            display: grid;
+            /* align-items: center; */
+            justify-content: center;
         }
 
-        h1 {
-            display: inline;
+        #heading:hover {
+            background-color: rgb(28, 178, 28);
         }
 
-        /* #nav {
-            display: inline;
-            background-color: aqua;
-        } */
         #nav li {
             display: inline;
+            border-radius: 2em;
+            background-color: rgb(39, 211, 211);
+            padding: 5px;
+            margin-left: 15px;
+            font-size: 32px;
+            justify-content: center;
+        }
+
+        #nav li:hover {
+            background-color: rgb(65, 255, 255);
+            /* color: pink; */
+        }
+
+        #main {
+            display: grid;
+            /* align-items: center; */
+            justify-content: center;
             background-color: aqua;
-            padding: 2px;
-            margin: 4px;
-            text-decoration: solid;
+        }
+
+        #main h1 {
+            text-align: center;
+            background-color: antiquewhite;
+            font-size: 50px;
+        }
+
+        #main textarea {
+            width: 1090px;
+            height: 261px;
         }
     </style>
 
@@ -48,6 +93,8 @@
     <div class="navbar">
         <div id="pic">
             <img id="logo" src="Charmender.png" alt="some issue">
+        </div>
+        <div id="heading">
             <h1>Textutils.com</h1>
         </div>
         <!-- <h4>Textutils.com</h4> -->
@@ -56,6 +103,14 @@
             <li>Contact us</li>
             <li>About us</li>
         </ul>
+    </div>
+
+    <div id="main">
+        <form action="/analyze" method="get">
+            <h1>Enter the text</h1>
+            <textarea name="text" cols="30" rows="10"></textarea>
+
+        </form>
     </div>
 </body>
 
