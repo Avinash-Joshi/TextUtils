@@ -12,12 +12,12 @@ def index (request):
     return render(request,'Desgining.html')
 
 def analyze(request):
-    djtext=request.GET.get('text','default')
-    removepuncuation=request.GET.get('removepunc','off')
-    uppercase=request.GET.get('uppercase','off')
-    space=request.GET.get('spaceremover','off')
-    newlineremover=request.GET.get('removenewline','off')
-    count=request.GET.get('countword','off')
+    djtext=request.POST.get('text','default')
+    removepuncuation=request.POST.get('removepunc','off')
+    uppercase=request.POST.get('uppercase','off')
+    space=request.POST.get('spaceremover','off')
+    newlineremover=request.POST.get('removenewline','off')
+    count=request.POST.get('countword','off')
 
     counter=0
     analyze=djtext
@@ -50,7 +50,7 @@ def analyze(request):
     if(newlineremover!='off'):
         analyze=''
         for index,char in enumerate(djtext):
-            if(char!='\n'):
+            if(char!='\n') and (char!='\r'):
                 analyze=analyze+char 
         djtext=analyze 
         print(djtext)       
@@ -70,12 +70,12 @@ def analyze(request):
     # return HttpResponse('Hello')
 
 # def analyze(request):
-#     djtext=request.GET.get('text','default')
-#     removepunc=request.GET.get('removepunc','off')
-#     upper=request.GET.get('uppercase','off')
-#     space=request.GET.get('spaceremover','off')
-#     newline=request.GET.get('removenewline','off')
-#     count=request.GET.get('countword','off')
+#     djtext=request.POST.get('text','default')
+#     removepunc=request.POST.get('removepunc','off')
+#     upper=request.POST.get('uppercase','off')
+#     space=request.POST.get('spaceremover','off')
+#     newline=request.POST.get('removenewline','off')
+#     count=request.POST.get('countword','off')
 #     print(djtext)
 #     print(removepunc)
 #     print(upper)
@@ -179,7 +179,7 @@ def analyze(request):
 # #     return render(request,'index.html',param)
 
 # # def removepunc(request):
-# #     djtext=request.GET.get('text','default')
+# #     djtext=request.POST.get('text','default')
 # #     print(djtext)
 # #     return HttpResponse('Remove Puncuation')
 #     # return render(request,'index.html')

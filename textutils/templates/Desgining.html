@@ -264,7 +264,7 @@
     </div>
 
     <div id="main">
-        <form action="/analyze" method="get">
+        <form action="/analyze" method="post"> {% csrf_token %}
             <h1>Enter the text</h1>
             <textarea name="text" cols="30" rows="10"></textarea>
             <br>
