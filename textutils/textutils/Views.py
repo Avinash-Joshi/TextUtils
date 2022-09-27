@@ -29,14 +29,14 @@ def analyze(request):
             if char not in pancuations:
                 analyze=analyze+char
         print(analyze)
-        Purpose='Pancuations removed'
+        Purpose='Pancuations removed '
         djtext=analyze
 
     if(uppercase!='off'):
         analyze=djtext.upper()
         djtext=analyze
         print(djtext)
-        Purpose=Purpose+'Uppercase'
+        Purpose=Purpose+'Uppercase '
 
     if(space!='off'):
         analyze=""
@@ -45,7 +45,7 @@ def analyze(request):
                 analyze=analyze+char
         djtext=analyze
         print(analyze)
-        Purpose=Purpose+'Removed Extra Space'
+        Purpose=Purpose+'Removed Extra Space '
 
     if(newlineremover!='off'):
         analyze=''
@@ -53,7 +53,8 @@ def analyze(request):
             if(char!='\n') and (char!='\r'):
                 analyze=analyze+char 
         djtext=analyze 
-        print(djtext)       
+        print(djtext)  
+        Purpose=Purpose+'Remove new line '     
 
     if(count!='off'):
         for char in djtext:
@@ -61,6 +62,7 @@ def analyze(request):
                 counter+=1
             else:
                 counter+=-1                
+        Purpose=Purpose+'Count the number of words'                
         param={'purpose':Purpose,'analyzed_text':analyze,'counter':counter}
         return render(request,'Analyze.html',param)
 
